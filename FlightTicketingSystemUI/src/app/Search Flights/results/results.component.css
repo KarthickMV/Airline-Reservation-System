@@ -1,0 +1,22 @@
+table {
+    width: 100%;
+    }
+    .cen{
+    margin: 0 auto;
+    justify-content :center;
+    }
+    .example-container {
+    display:block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    justify-content: center;
+    }
+    label{
+    font-style:normal;
+    font-size: 1.2 em;
+    color: blue;
+    }

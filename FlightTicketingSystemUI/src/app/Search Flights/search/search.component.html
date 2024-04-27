@@ -1,0 +1,185 @@
+<!-- <mat-sidenav-container class="example-container">  -->
+      
+
+  <div class="example-container" > 
+    <nav class="navbar navbar-expand-sm bg ">
+    <img src="../assets/Boeinglogo.png" alt="" height="70vh">
+    <h1 style="color: white;"> Boeing Air Trip</h1>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+    <ul class="navbar-nav ml-auto ">
+    <li class="nav-item "><a class="nav-link" href="#">Home</a></li>
+    <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"><img src="../assets/user.jpg" alt="" height="30vh"> User</a>
+    <div class="dropdown-menu bg">
+    <a class="dropdown-item " href="#">Logout</a>
+    </div>
+    </li>
+    
+    </ul> 
+    </div>
+    </nav>
+      
+    
+      <div class="jumbotron " id = "arr">
+          <div class="display">
+          <img src="../assets/airplaneimg.webp" class=" bgimage bg-center bg-no-repeat bg-cover" width="100%" height="20%" >
+          </div>
+          
+      </div>
+    
+       
+      <!-- <button type="submit" id="feedback">Subscribe! </button> -->
+    
+      <div class="container">
+         <form method="GET" action="#"  (ngSubmit)="doSubmit()">
+                <fieldset>
+                  
+                <h2>Search Flights</h2>
+            <br>
+
+            
+                <!-- <input type="checkbox" checked="checked" value="1" [(ngModel)]="data.way" name="gob" value="1" [checked]="true" ngModel required (click)=onClick() (change)="onItemChange($event.target.value)"/><label for="way">   One way</label> &nbsp;
+            
+            &nbsp;
+            
+                <input type="checkbox" checked="checked" value="2" [disabled]="buttonDisabled" [(ngModel)]="data.way" name="gob" value="1" [checked]="true" ngModel required (click)=onClicked() (change)="onItemChange($event.target.value)"/><label for="way"> Round Trip</label> &nbsp;
+            -->
+            
+            <button class="button button5">
+              <input type="radio" checked="checked" value="1" [(ngModel)]="data.way" name="gob" value="1" [checked]="true"  (click)=onClick() (change)="onItemChange($event.target.value)"/><label for="way">   One way</label> &nbsp;
+    
+            </button>
+            &nbsp;
+            <button class="button button5">
+                <input  type="radio"checked="checked" value="2" [(ngModel)]="data.way" name="gob" value="2" [checked]="true"  (click)=onClicked() (change)="onItemChange($event.target.value)"/><label for="way">   Two way</label>
+            </button>        
+        
+
+                    <br>
+                    <br>
+                    <mat-form-field appearance="fill">
+                        <mat-label>From </mat-label>
+                        <input aria-required="true" name="from" [(ngModel)]="data.from" matInput placeholder="Starting from">
+                        <!-- <div *ngIf="f.from.invalid && f.from.touched)" class="alert"></div>
+                        <div *ngIf="f.from.errors.required"> from is required. </div> -->
+                    </mat-form-field>
+                    &nbsp;
+                    <!-- <button class="SwapLocation" type="button" aria-label="Swap origin and destination"></button> -->
+                    <mat-form-field appearance="fill">
+                        <mat-label>To</mat-label>
+                        <input name="to" [(ngModel)]="data.to" matInput placeholder="Going to">
+                    </mat-form-field>
+            <br>
+                    
+            <br>
+                     <mat-form-field appearance="fill">
+                        <mat-label>Depart on</mat-label>
+                        <input  [readonly]="inputReadonly" placeholder="Choose date from calender" name="departOn"  [(ngModel)]="data.departOn" matInput [matDatepicker]="picker" [min]="minDate" >
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                    &nbsp; &nbsp;
+                    
+                    <mat-form-field appearance="fill">
+                        <mat-label>Return on</mat-label>
+                        <input [readonly]="inputReadonly" placeholder="Choose date from calender" name="returnOn"  [disabled]="buttonDisabled" [(ngModel)]="data.returnOn" matInput [matDatepicker]="picker2" [min]="minDate" >
+                        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                        <mat-datepicker #picker2></mat-datepicker>
+                    </mat-form-field> 
+                  
+                  
+                    
+              
+            <br>
+                    
+            <br>
+                    <mat-form-field appearance="fill" class="adult">
+                        <mat-label>Adults</mat-label>
+                        <mat-select name="adults" [(ngModel)]="data.adults">
+                        <mat-option value="0">0</mat-option>
+                        <mat-option value="1">1</mat-option>
+                        <mat-option value="2">2</mat-option>
+                        <mat-option value="3">3</mat-option>
+                        <mat-option value="4">4</mat-option>
+                        <mat-option value="can't add more" class="dropdown-item disabled">Can't add more</mat-option>
+                        </mat-select>
+                    </mat-form-field> 
+                    &nbsp;&nbsp;
+                    <mat-form-field appearance="fill">
+                        <mat-label>Children</mat-label>
+                        <mat-select name="children" [(ngModel)]="data.children">
+                        <mat-option value="0">0</mat-option>
+                        <mat-option value="1">1</mat-option>
+                        <mat-option value="2">2</mat-option>
+                        <mat-option value="3">3</mat-option>
+                        <mat-option value="4">4</mat-option>
+                        <mat-option value="can't add more" class="dropdown-item disabled">Can't add more</mat-option>
+                        </mat-select>
+                    </mat-form-field> 
+                    &nbsp;&nbsp;
+                    <mat-form-field appearance="fill">
+                        <mat-label>Infants</mat-label>
+                        <mat-select name="infants" [(ngModel)]="data.infants">
+                        <mat-option value="1">1</mat-option>
+                        <mat-option value="2">2</mat-option>
+                        <mat-option value="can't add more" class="dropdown-item disabled">Can't add more</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+            <br><br>
+            
+                <!-- <button mat-raised-button color="primary">Reset</button>  -->
+                <button type="reset"  mat-raised-button color="primary" >Reset</button>
+                &nbsp;
+                   <button type="submit" mat-raised-button color="primary" routerLink= "/search">Submit</button>
+                <!-- <button mat-raised-button color="primary">Submit</button> -->
+            <br>
+                </fieldset>
+            </form>
+            </div>
+        
+        <br><br>
+        <!-- {{data | json}} -->
+      
+        <footer class=" bg text-center text-lg-start">
+          <div class="container">
+          <br>
+          <ul class="list-unstyled" class="nav justify-content-center">
+          <li class="nav-item">
+          <a href="#!" >About Us</a></li> &nbsp;&nbsp;&nbsp;
+          <li class="nav-item">
+          <a href="#!" >Terms of use</a></li> &nbsp;&nbsp;&nbsp;
+          <li class="nav-item">
+          <a href="#!" >Privacy Policy</a></li>&nbsp;&nbsp;&nbsp;
+          <li class="nav-item">
+          <a href="#!" >Advertising</a></li>&nbsp;&nbsp;&nbsp;
+          </ul>
+          <br>
+          <p> Socials</p>
+          
+          <ul class="list-unstyled" class="nav justify-content-center">
+          <li class="nav-item">
+          <a href="https://www.facebook.com" ><img src="../assets/facebook.png" width="15%"></a></li> &nbsp;
+          <li class="nav-item">
+          <a href="https://www.twitter.com" ><img src="../assets/twitter.png" width="15%"></a></li> &nbsp;
+          <li class="nav-item">
+          <a href="https://www.instagram.com" ><img src="../assets/insta.jpg" width="15%"></a></li> &nbsp;
+          </ul>
+          <br><br>
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);" width="100%">
+          © 2020 Copyright:
+          <a class="text-light" href="https://boeing.com/">Boeing.com</a>
+          </div>
+          </div>
+          </footer>
+          //</div>
+     
+      <!-- </mat-sidenav-container> -->
+      
+      
+    
+    
+    
+    

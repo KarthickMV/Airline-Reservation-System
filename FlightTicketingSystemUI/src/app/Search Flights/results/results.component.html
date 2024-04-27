@@ -1,0 +1,113 @@
+<app-header></app-header>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="card w-60">
+<div class="card-body card-group">
+<div class="card w-10">
+<label class="card-title">One way / Round </label>
+<div class="card-text">Show one way or round trip</div>
+</div>
+&nbsp; &nbsp; &nbsp;
+<div class="card w-10">
+<label class="card-title"> From</label>
+<div class="card-text">From?</div>
+</div>
+&nbsp; &nbsp; &nbsp;
+<div class="card w-10">
+<label class="card-title"> To</label>
+<div class="card-text">Destination?</div>
+</div>
+&nbsp; &nbsp; &nbsp;
+<div class="card w-5">
+<label class="card-title">Departure date</label>
+<div class="card-text">Departure date</div>
+</div>
+&nbsp; &nbsp; &nbsp;
+<div class="card w-5">
+<label class="card-title">Return date</label>
+<div class="card-text">Return date</div>
+</div>
+&nbsp; &nbsp; &nbsp;
+<div class="card w-5">
+<label class="card-title">No. of Travellers </label>
+<div class="card-text">No. of Travellers</div>
+</div>
+&nbsp; &nbsp; &nbsp;
+
+<button type="submit" class="btn btn-primary">Update details</button>
+
+</div>
+</div>
+<br>
+<br>
+<div style="text-align: center;" >
+<h1 >Flight details:</h1>
+<h5>//Dummy data taken.</h5>
+</div>
+<br>
+<div class="row">
+
+<div class="col-md-3" style="margin-left: 2em;" >
+<div class="card">
+<div class="card-body">
+<div class="card-header">Customize</div>
+<br>
+<br>
+
+<div class="dropdown">
+<button class="btn btn-secondary btn-lg btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Sort by
+</button>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+<a class="dropdown-item" href="#">Price(Lowest)</a>
+<a class="dropdown-item" href="#">Price(Highest)</a>
+<a class="dropdown-item" href="#">Duration(Shortest)</a>
+<a class="dropdown-item" href="#">Duration(Longest)</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<ul *ngIf = "dataInfo" class="col-md-7" >
+    <li *ngFor = "let da of dataInfo" class="card">
+    <div class="card-body">
+    <p>
+    <label for="Id">Id: </label> &nbsp;
+    <span class="id">{{da.id}}</span>
+    </p>
+    
+    <p>
+    <label for="name">Name: </label> &nbsp;
+    <span class="name">{{da.name}}</span>
+    </p>
+    <p>
+    <label for="username">Username: </label> &nbsp;
+    <span class="username">{{da.username}}</span>
+    </p>
+    <p>
+    <label for="email">Email: </label> &nbsp;
+    <span class="email">{{da.email}}</span>
+    </p>
+    <a href="#" class="btn btn-primary" routerLink= "/book">Book Flights</a>
+    </div>
+    </li>
+    </ul>
+    </div>
+    
+    
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <app-footer></app-footer>

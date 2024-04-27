@@ -1,0 +1,101 @@
+#arr{
+    padding: 0;
+    margin-bottom: -2em;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height: 60vh;
+}  
+
+.bg-cover {
+    background-size: cover;
+}
+
+.bg{
+    opacity: 1;
+    background-image: linear-gradient(273deg,#009bdf,#0033a1 75%);
+    }
+
+a{
+   color: white;
+}
+
+.bgColor{
+    color: rgba(9,14,18,.98);
+}
+
+.container{
+    padding-top: 5em;
+    color:white
+
+   
+}
+
+#feedback{
+    position: fixed;
+    display: block;
+    background-color:papayawhip;
+    height: 100em;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    width: 155px;
+    text-align: center;
+    color:navy;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+ #feedback {
+    height: 0px;
+    width: 85px;
+    position: fixed;
+    right: 0;
+    top: 30%;
+    z-index: 1000;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+.text-white{ 
+    padding-left: 22em;
+     padding-top: 0.8em; 
+     font-family:cursive
+}
+
+.example-container {
+    display:block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    justify-content: center;
+}
+
+.text-light{ 
+    color: beige;
+}
+
+.button {
+    border: none;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+
+.button5 {
+    border-radius: 70%;
+}
+
+h2{
+    font-size: 2em;
+}
